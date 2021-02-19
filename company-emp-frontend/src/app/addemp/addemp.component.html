@@ -1,0 +1,50 @@
+
+<form [formGroup]="signupForm" (ngSubmit)="onSSignup()">
+<div class="col-md-8 offset-md-2 " id="loginn" >
+<h3>Add Employee </h3>
+      <div class="form-group ">
+
+          <div class="controls">
+          <label>User Name:<span class="lblError">*</span></label>
+              <input type="text" formControlName="name" placeholder="Your answer">
+              <p *ngIf="signupForm.get('name').hasError('required') && !signupForm.get('name').pristine "
+          class="lblError">User Name is required</p>
+          </div>
+      </div>
+      <div class="form-group ">
+
+          <div class="controls">
+          <label>User age:<span class="lblError">*</span></label>
+              <input type="number" formControlName="age" placeholder="Your answer">
+               <p *ngIf="signupForm.get('age').hasError('required') && !signupForm.get('age').pristine "
+          class="lblError">User age is required</p>
+          <p *ngIf="signupForm.get('age').hasError('age') && !signupForm.get('age').pristine "
+          class="lblError">enter age proper </p>
+
+          </div>
+      </div>
+      <div class="form-group ">
+
+          <div class="controls">
+          <label>User sallary:<span class="lblError">*</span></label><br/><br/>
+            <input type="number" formControlName="sallary" placeholder="Your answer">
+               <p *ngIf="signupForm.get('sallary').hasError('required') && !signupForm.get('sallary').pristine "
+          class="lblError">user sallary is required</p>
+          </div>
+      </div>
+      <div class="form-group ">
+
+          <div class="controls">
+          <label>user phonenumber:<span class="lblError">*</span></label>
+              <input type="phone" formControlName="phonenumber" placeholder="Your answer">
+               <p *ngIf="signupForm.get('phonenumber').hasError('required') && !signupForm.get('phonenumber').pristine "
+          class="lblError">Create phonenumber is required</p>
+
+          </div>
+      </div>
+
+      <button id="btn1" type="submit" >Submit</button>
+      <button id="btn2" routerLink="/">Logout</button>
+</div>
+</form>
+

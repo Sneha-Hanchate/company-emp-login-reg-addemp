@@ -1,0 +1,17 @@
+<div class="container">
+
+    <div class="col-md-8 offset-md-2 " id="loginn" >
+    <p>Login </p>
+    <div>
+    <label>User Email or PhoneNumber: <span class="lblError">*</span></label>
+      <input type="email" [(ngModel)] ="a" required />
+    </div>
+    <div>
+    <label>User Password: <span class="lblError">*</span></label>
+      <input type="password" [(ngModel)] ="b" required />
+    </div><br/>
+      <button id="btn1" (click)="login()" > Login </button>
+       <button id="btn2" routerLink="/reg">Register here</button>
+      </div>
+
+</div>

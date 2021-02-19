@@ -1,0 +1,49 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+<div class="col-md-8 offset-md-2 " id="loginn" >
+<h3>Register </h3>
+      <div class="form-group ">
+
+          <div class="controls">
+          <label>User Name:<span class="lblError">*</span></label>
+              <input type="text" formControlName="name" placeholder="Your answer">
+              <p *ngIf="signupForm.get('name').hasError('required') && !signupForm.get('name').pristine "
+          class="lblError">User Name is required</p>
+          </div>
+      </div>
+      <div class="form-group ">
+
+          <div class="controls">
+          <label>User Email:<span class="lblError">*</span></label>
+              <input type="email" formControlName="email" placeholder="Your answer">
+               <p *ngIf="signupForm.get('email').hasError('required') && !signupForm.get('email').pristine "
+          class="lblError">User email is required</p>
+          <p *ngIf="signupForm.get('email').hasError('email') && !signupForm.get('email').pristine "
+          class="lblError">enter email proper </p>
+
+          </div>
+      </div>
+      <div class="form-group ">
+
+          <div class="controls">
+          <label>User Phone:<span class="lblError">*</span></label><br/><br/>
+            <input type="phone" formControlName="phone" placeholder="Your answer">
+               <p *ngIf="signupForm.get('phone').hasError('required') && !signupForm.get('phone').pristine "
+          class="lblError">user phone is required</p>
+          </div>
+      </div>
+      <div class="form-group ">
+
+          <div class="controls">
+          <label>Create Password:<span class="lblError">*</span></label>
+              <input type="text" formControlName="password" placeholder="Your answer">
+               <p *ngIf="signupForm.get('password').hasError('required') && !signupForm.get('password').pristine "
+          class="lblError">Create password is required</p>
+
+          </div>
+      </div>
+
+      <button id="btn1" type="submit" [disabled]="signupForm.invalid">Submit</button>
+      <button id="btn2" routerLink="/">Back to Login</button>
+</div>
+</form>
+

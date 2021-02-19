@@ -1,0 +1,24 @@
+<p>Employee List </p>
+<input type="text" #input1 (keyup)="onKeyUp(input1.value)" placeholder="Search Here">
+<div id="t">
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Sallary</th>
+        <th>PhoneNumber</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of arrEmp">
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.sallary}}</td>
+        <td>{{item.phonenumber}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<button id="btn2" routerLink="/">Logout</button>

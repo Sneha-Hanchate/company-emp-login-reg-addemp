@@ -1,0 +1,56 @@
+table{
+  width:60%;
+  text-align: center;
+}
+#t{
+  margin-left:30%;
+  margin-top: 3%;
+}
+th{
+  font-size: 2.3rem;
+  margin: 1%;font-family:Comic Sans MS;
+  font-weight: bold;
+  color: #F50057;
+}
+td{
+  font-size: 1.6rem;
+  margin: 1%;
+}
+p{
+  color: #00ACC1;
+  font-size:4rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2%;
+}
+#btn2:hover{
+  color:blue;
+}
+#btn2{
+  padding: 1%;
+  font-weight: bold;
+  border-bottom: 1px solid grey;
+  border: none;
+  background-color: #f59f00;
+  /* color: white; */
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  margin-left: 70%;
+  font-size:2rem;
+color: white;
+
+}
+#btn2:hover{
+  background-color: teal;
+  color: white;
+}
+input{
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  /* padding: 1%; */
+font-size: 1.4rem;
+border: none;
+border-bottom: 1px solid black;
+}
